@@ -16,14 +16,14 @@ services:
       - "./logs:/var/logs/trade"
       - "./btc/src/viabtc:/src/viabtc"
     ports:
-      - "17416:7416"
-      - "17316:7316"
-      - "17317:7317"
-      - "17424:7424"
-      - "14444:4444"
-      - "18080:8080"
-      - "18081:8081"
-      - "18091:8091"
+      - "127.0.0.1:17416:7416"
+      - "127.0.0.1:17316:7316"
+      - "127.0.0.1:17317:7317"
+      - "127.0.0.1:17424:7424"
+      - "127.0.0.1:14444:4444"
+      - "127.0.0.1:18080:8080"
+      - "127.0.0.1:18081:8081"
+      - "127.0.0.1:18091:8091"
     extra_hosts:
       - "dockerhost:172.21.0.1"
     depends_on:
@@ -99,5 +99,4 @@ services:
       - "/viabtc_exchange_server_docker_with_nginx/nginx/sites-enabled:/viabtc_exchange_server_docker_with_nginx/nginx/sites-enabled"
       - "./btc/tmp:/sockets"
     ports:
-      - "8008:8008"
-
+      - "127.0.0.1:8008:8008"
